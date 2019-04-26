@@ -1,6 +1,6 @@
 # PareAqui
 
-BackEnd do APP PareAqui
+Backe-nd do APP PareAqui
 
 Aplicativo desenvolvido como Trabalho de conclusão de curso na universidade São Judas Tadeu no ano de 2018.
 
