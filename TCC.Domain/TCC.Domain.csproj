@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA05A750-D454-4D18-826F-F0ACE33230A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCC.Domain</RootNamespace>
+    <AssemblyName>TCC.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Avaliacao.cs" />
+    <Compile Include="Entities\Chat.cs" />
+    <Compile Include="Entities\DadosBancario.cs" />
+    <Compile Include="Entities\DadosPagamento.cs" />
+    <Compile Include="Entities\Evento.cs" />
+    <Compile Include="Entities\Foto.cs" />
+    <Compile Include="Entities\Garagem.cs" />
+    <Compile Include="Entities\Locacao.cs" />
+    <Compile Include="Entities\NotificacaoEmailSms.cs" />
+    <Compile Include="Entities\Pagamento.cs" />
+    <Compile Include="Entities\Transferencia.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Entities\Vaga.cs" />
+    <Compile Include="Entities\Veiculo.cs" />
+    <Compile Include="Interfaces\Repositories\IAvaliacaoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IChatRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDadosBancarioRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IDadosPagamentoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEventoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IFotoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IGaragemRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ILocacaoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\INotificacaoEmailSmsRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IPagamentoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITransferenciaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUsuarioRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\IVagaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IVeiculoRepository.cs" />
+    <Compile Include="Interfaces\Services\IAvaliacaoService.cs" />
+    <Compile Include="Interfaces\Services\IChatService.cs" />
+    <Compile Include="Interfaces\Services\IDadosBancarioService.cs" />
+    <Compile Include="Interfaces\Services\IDadosPagamentoService.cs" />
+    <Compile Include="Interfaces\Services\IEventoService.cs" />
+    <Compile Include="Interfaces\Services\IFotoService.cs" />
+    <Compile Include="Interfaces\Services\IGaragemService.cs" />
+    <Compile Include="Interfaces\Services\ILocacaoService.cs" />
+    <Compile Include="Interfaces\Services\INotificacaoEmailSmsService.cs" />
+    <Compile Include="Interfaces\Services\IPagamentoService.cs" />
+    <Compile Include="Interfaces\Services\ITransferenciaService.cs" />
+    <Compile Include="Interfaces\Services\IUsuarioService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Interfaces\Services\IVagaService.cs" />
+    <Compile Include="Interfaces\Services\IVeiculoService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AvaliacaoService.cs" />
+    <Compile Include="Services\ChatService.cs" />
+    <Compile Include="Services\DadosBancarioService.cs" />
+    <Compile Include="Services\DadosPagamentoService.cs" />
+    <Compile Include="Services\EventoService.cs" />
+    <Compile Include="Services\FotoService.cs" />
+    <Compile Include="Services\GaragemService.cs" />
+    <Compile Include="Services\LocacaoService.cs" />
+    <Compile Include="Services\NotificacaoEmailSmsService.cs" />
+    <Compile Include="Services\PagamentoService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\TransferenciaService.cs" />
+    <Compile Include="Services\UsuarioService.cs" />
+    <Compile Include="Services\VagaService.cs" />
+    <Compile Include="Services\VeiculoService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

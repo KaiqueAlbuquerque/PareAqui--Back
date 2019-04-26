@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Html.AntiForgeryToken();
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<script>
+    /*var vaga = { PrecoAvulso: "25,00", PrecoDiaria: "35,00", AposPrimeiraHora: "5,00", Avulso: "true", Mensal: "false", Diaria: "true", GaragemId: "1", PortaoAutomatico: "true", Coberta: "true", UsuarioId: "1", AceitaSugestaoDePreco: "true" }
+    var usu = { Nome: "Matheus", Email: "natmapls@hotmail.com", Sexo: "M", Senha: "123456", AceitaReceberEmail: "true", AceitaReceberSms: "false" };//, ChegaDeMadrugada: "true", SaiDeMadrugada: "true"};
+    var arr = { GaragemId: "1", Cep: "03981040", NumeroRua: "55", Complemento: "Rua da feira de sexta feira", Latitude: "-23.6125712", Longitude: "46.5203894", UsuarioId: "1" };
+    var gar = {
+                Cep: "03220000",
+                Endereco: "Rua Serra de Itabaiana",
+                NumeroRua: "5660",
+                Bairro: "Parque Santa Madalena",
+                Cidade:"São Paulo",
+                Estado: "São Paulo",
+                Latitude: "-23.606041",
+                Longitude: "-46.5225321",
+                Condominio: "true" };
+    //var vaga = { Observacao: "boa vaga", NumeroVaga: "10", PrecoAvulso: "25,00", PrecoMensal: "210,00", Avulso: "false", Mensal: "true", GaragemId: "4", PortaoAutomatico: "true", Coberta: "true", UsuarioId: "3", AceitaSugestaoDePreco: "true" }
+    var vaga = { PrecoAvulso: "25,00", PrecoDiaria: "35,00", AposPrimeiraHora:"5,00", Avulso: "true", Mensal: "false", Diaria: "true", GaragemId: "3", PortaoAutomatico: "true", Coberta: "true", UsuarioId: "4", AceitaSugestaoDePreco: "true" }
+    var veiculo = { Placa: "AAA-9669", IdMarcaFipe: "1", IdModeloFipe: "359", IdAnoFipe:"4", Cor:"Azul", CategoriaVeiculo:"2", UsuarioId:"1" }
+    var evento = { Cep: "03205020", Numero: "80", Latitude: "-23.5994262", Longitude: "-46.5659469", Endereco: "Rua Manderá 80", DataHoraInicio: "2018-10-01 17:00:00", DataHoraFim: "2018-10-01 19:00:00", CategoriaEvento: "6", NomeEvento: "COR x SAO" }
+    var locacao = { DiaHoraInicio: "2018-09-02 10:00", DiaHoraFim: "2018-09-02 23:00", ModalidadeLocacao: "1", ValorLocacao: "20,00", VeiculoId: "1", VagaId: "5" };
+    
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+           console.log(JSON.parse(this.responseText));
+            
+        }
+    };
+
+    //Locação
+    xhttp.open("GET", "/Locacao/ConsultarGaragemPorLatLong?latitude=-23.4803784&longitude=-46.7191827&coberta=false&descoberta=false&portaoAutomatico=false&portaoManual=false&avulso=false&mensal=false&diaria=false&idUsuarioLocatario=3", true);
+    //xhttp.open("GET", "/Locacao/ConsultarLocacaoPorIdUsuario?idUsuario=1&comoLocador=false&comoLocatario=true&aprovada=true&reprovada=true&ativa=false&finalizada=false&avulso=true&mensal=true&diaria=true&cancelada=false", true);
+    //xhttp.open("POST", "/Locacao/AprovarLocacao", true);
+    //xhttp.open("POST", "/Locacao/ReprovarLocacao", true);
+    //xhttp.open("GET", "/Locacao/VerificarDisponibilidade?idVaga=5", true);
+    //xhttp.open("POST", "/Locacao/FinalizarLocacao", true);
+    //xhttp.open("GET", "/Locacao/CancelarLocacaoCotacao?idLocacao=10&idUsuario=1", true);
+    //xhttp.open("POST", "/Locacao/CancelarLocacao", true);
+
+    //Usuário
+    //xhttp.open("POST", "/Usuario/CadastrarUsuario", true);
+    //xhttp.open("GET", "/Usuario/ConsultarPorEmail?email=matheus@hotmail.com", true);
+    //Garagem
+    //xhttp.open("POST", "/Vaga/CadastrarVaga", true);
+    //xhttp.open("GET", "/Garagem/ConsultarGaragens?idUsuario=2");
+    //Vaga
+    //xhttp.open("POST", "/Vaga/CadastrarVaga", true);
+    //xhttp.open("POST", "/Vaga/AprovarVaga", true);
+
+    //Evento
+    //xhttp.open("POST", "/Evento/CadastrarEvento", true);
+    //xhttp.open("POST", "/Evento/AprovarEvento", true);
+
+    //xhttp.open("GET", "/Home/ConsultarDadosDashBoard", true);
+    xhttp.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+    //xhttp.send();//JSON.stringify(evento));//{ "idLocacao": 10 }));//, "idUsuario": 1, "multa": 1.00 }));
+    xhttp.send()//JSON.stringify(gar));//({"vaga": vaga, "quantidade": 2, "fotos", fotos }));
+    */
+</script>
